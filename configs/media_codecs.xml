@@ -103,7 +103,7 @@ Only the three quirks included above are recognized at this point:
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Settings>
-        <Setting name="max-video-encoder-input-buffers" value="11" />
+        <Setting name="max-video-encoder-input-buffers" value="9" />
     </Settings>
     <Encoders>
         <!-- Audio Hardware  -->
@@ -327,7 +327,8 @@ Only the three quirks included above are recognized at this point:
             <Feature name="secure-playback" required="true" />
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>
-    </Decoders>
+        <MediaCodec name="OMX.qti.audio.decoder.flac" type="audio/flac" />
+      </Decoders>
     <Include href="media_codecs_google_video.xml" />
     <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>
